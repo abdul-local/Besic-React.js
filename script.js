@@ -1,78 +1,83 @@
-var angkaX=[1,2,3,4];
-//var angkaY=angkaX;
-//console.log(angkaY);
-//angkaY[0]=7;
-//console.log(angkaY);
-//console.log(angkaX);
+//var angka=[1,2,3,4,5,6,7,8,9,10];
+//// penggunaaan filter
+//
+//// membuat array baru dengan angka element sama persis
+//var daftarAngka=angka.filter(element=>true);
+//console.log(daftarAngka);
+//
+//// membuat array baru dengan element angka-angka diatas 4
+//var angkaDiatasEmpat=angka.filter(element=>element>4);
+//console.log(angkaDiatasEmpat);
 
-// pada code di atas jelas memuculkan angka yg sama karena clone tidak bisa dengan sama dengan
-// spread syntax
+// penggunaan findindex lebih ke mencari nilainya
+//array.findIndex(element => { statement })
+// array of object
+//var daftarSiswa =[
+//    {id:1,nama:'Aura'},
+//    {id:2,nama:'Dian'},
+//    {id:3,nama:'Rodi'},
+//    {id:4,nama:'charli'},
+//]
+////mencari posisi rodi
+//var indexrodi = daftarSiswa.findIndex(siswa=>siswa.nama =='Rodi');
+//console.log(indexrodi);// HASIL 2
 
-//var angkaY=[...angkaX];
-//angkaY[0]=7;
-//console.log(angkaY);
-//console.log(angkaX);
-//
-//var namaMahasiswaB=['abdul','hipzil','bianca'];
-//var namaMahasiswa=['andre','riza',...namaMahasiswaB,'pinka'];
-//console.log(namaMahasiswa);
-//
-//var perkalianlimaangka=(a,b,c,d,e)=>a*b*c*d*e;
-//var data=[1,2,3,4,5];
-//
-//// menggunakan cara manual
-//var hasil1=perkalianlimaangka(data[0],data[1],data[2],data[3],data[4]);
-//
-//// menggunakan spred sintax
-//var hasil=perkalianlimaangka(...data);
-//console.log(hasil);
-//console.log(hasil1);
-//var huruf=['a','b','c','d','e','f','g','h','i','j'];
-//var [hurufpertama]=huruf;
-//console.log(hurufpertama); // hasil a
-//var[hurufpertama,...sisaelement]=huruf;
-//console.log(sisaelement);
-//
-//
+// penggunaan splice lebih digunakan untuk menghapus dan menyisipkan element pada array
+var namaBulan=['januari','Maret','April'];
 
-// penggunaan destructuring pada object saja
-//var nilai ={
-//    andi:80,
-//    budi:90,
-//    zul:100,
-//    arman:70,
-//    dena:100,
-//}
-//
-//// mengambil nilai budi dengan cara baru
-//var {budi}=nilai;
-//console.log(budi);
-//
-//// mengamvil nilai dengan cara lama
-//console.log(nilai.budi);
+// menyisipkan bulan Februari ke index 1
+// paramter 1 menyisipkan ke inde berapa, parameter ke 2 nilai yang di hapus dan paramter ke 2 nilai yang diisi
+namaBulan.splice(1,0,'Februai');
+console.log(namaBulan);
+// array of object
+var daftarSiswa =[
+    {id:1,nama:'Aura'},
+    {id:2,nama:'Dian'},
+    {id:3,nama:'Rodi'},
+    {id:4,nama:'charli'},
+]
+// mencari posisi Rodi
+var indexRodi=daftarSiswa.findIndex(siswa=>siswa.nama =='Rodi');
+daftarSiswa.splice(indexRodi,1);
+console.log(daftarSiswa);
 
-//Object Literal Enhancement
-var nama='abdul';
-var usia='18 tahun';
-var jeniskelamin='laki-laki';
+// Penggunaan method Sort() digunakan untuk mengurutkan array, jika bernilai string maka di urutkan berdasarkan alphabet
 
-// deklarasikan dengan object dengan cara biasa
-var object={
-    nama:nama,
-    usia:usia,
-    jeniskelamin:jeniskelamin,
-    hobby:'leraning program',
-}
-// deklarasikan oject dengan OLE
-var object1={
-    nama,
-    usia,
-    jeniskelamin,
-    hobby:'dangdutan'
+//var daftarSiswa=['brian','abdul','dian','rodi','aura'];
+//var urutansiswa=daftarSiswa.sort();
+//console.log(urutansiswa);
+
+var angka=[3,4,9,1,10];
+// menggunakan arrow function
+var hasil=angka.sort((a,b)=>a-b);
+// dengan menggunakan function
+var hasil1=angka.sort(function(a,b){return a-b})
+console.log(hasil);
+console.log(hasil1);
+
+// penggunaan for
+var daftarSiswa =[
+    {id: 1, nama:'Abdul'},
+    {id: 2, nama:'Bryan'},
+    {id: 3, nama:'Charlie'},
+    {id: 4, nama:'Diandra'}
+]
+for(let siswa of daftarSiswa){
+    console.log(siswa.nama);
 }
 
-console.log(object);
-console.log(object1);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

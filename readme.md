@@ -10,3 +10,9 @@
 2. biasanya di tandai denga ...variavel
 3.Destructuring => ini berguna untuk mengambil bagian tertentu saja
 4.Object Literal Enchancment=>penyusuna object lebih singkat
+# Manipulasi Array
+1. filter() ini di gunakan untuk melakukan filter/ penyaringa elemen-element array
+2. findIndex digunakan untuk mencari index atau posisi suatu value/element dalam array.
+3. splice dapat digunakan untuk menghapus dan menysisipkan element pada array.
+4. sort() digunakan untuk mengurutkan elemnt array.
+5. looping for of melakukan perulangan 
